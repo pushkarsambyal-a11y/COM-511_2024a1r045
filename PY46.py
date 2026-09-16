@@ -1,12 +1,11 @@
-# Write a Python program to input two numbers and find their greatest common divisor using a loop.
+# Write a Python program to input two numbers and find their greatest common divisor using a loop and using euclidean algorithm.
 
-num1 = int(input("Enter the first number: "))
-num2 = int(input("Enter the second number: "))
-min_num = min(num1, num2)
+number1 = int(input("Enter the first number: "))
+number2 = int(input("Enter the second number: "))
 
-gcd = 1
-for i in range(1, min_num + 1):
-    if num1 % i == 0 and num2 % i == 0:
-        gcd = i
+while number2 != 0:
+    temp = number2
+    number2 = number1 % number2
+    number1 = temp
 
-print(f"The greatest common divisor of {num1} and {num2} is {gcd}.")
+print(f"The greatest common divisor is: {number1}")

@@ -7,7 +7,7 @@ is_prime = True
 if number < 2:
     is_prime = False
 else:
-    for i in range(2, int(number ** 0.5) + 1):
+    for i in range(2, number):
         if number % i == 0:
             is_prime = False
             break
